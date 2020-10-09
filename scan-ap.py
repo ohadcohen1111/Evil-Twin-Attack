@@ -3,10 +3,12 @@
 # version: 0.2
 # Author: iphelix
 import sys, os, signal
+import subprocess
 from multiprocessing import Process
 
 from scapy.all import *
 from scapy.layers.dot11 import Dot11Beacon, Dot11ProbeResp, Dot11Elt, Dot11
+
 
 interface='' # monitor interface
 aps = {} # dictionary to store unique APs
@@ -16,11 +18,11 @@ def sniffAP(p):
     if ( (p.haslayer(Dot11Beacon) or p.haslayer(Dot11ProbeResp)) 
                  and not aps.has_key(p[Dot11].addr3)):
         ssid       = p[Dot11Elt].info
-        bssid      = p[Dot11].addr3    
+        bssid      = p[Dot11].addr3
         channel    = int( ord(p[Dot11Elt:3].info))
         capability = p.sprintf("{Dot11Beacon:%Dot11Beacon.cap%}\
                 {Dot11ProbeResp:%Dot11ProbeResp.cap%}")
-        
+
         # Check for encrypted networks
         if re.search("privacy", capability): enc = 'Y'
         else: enc  = 'N'
@@ -29,8 +31,6 @@ def sniffAP(p):
         aps[p[Dot11].addr3] = enc
 
         # Display discovered AP
-        if bssid is None: # prevent print Errors
-            return
         print ("%02d  %s  %s %s" % (int(channel), enc, bssid, ssid))
 
 # Channel hopper
@@ -48,12 +48,9 @@ def signal_handler(signal, frame):
     p.terminate()
     p.join()
 
-    print ("\n-=-=-=-=-=  STATISTICS =-=-=-=-=-=-")
-    print ("Total APs found: %d" % len(aps))
-    print ("Encrypted APs  : %d" % len([ap for ap in aps if aps[ap] =='Y']))
-    print ("Unencrypted APs: %d" % len([ap for ap in aps if aps[ap] =='N']))
+    print ("\nTotal APs found: %d\n" % len(aps))
 
-    sys.exit(0)
+    sys.exit()
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
@@ -63,7 +60,7 @@ if __name__ == "__main__":
     interface = sys.argv[1]
 
     # Print the program header
-    print ("-=-=-=-=-=-= AIROSCAPY =-=-=-=-=-=-")
+    print ("==============Scan Access Points==============")
     print ("CH ENC BSSID             SSID")
 
     # Start the channel hopper
