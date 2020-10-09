@@ -50,6 +50,7 @@ printf "\e                                                                      
 	echo -e "${BICyan}Enter ${BIRed}1${BICyan} to Install: "
 	echo -e "Enter ${BIRed}2${BICyan} to Scan Access Point: "
 	echo -e "Enter ${BIRed}3${BICyan} to Start Evil Twin Attack: "
+	echo -e "Enter ${BIRed}4${BICyan} to Start Evil Twin Protection: "
 	echo -e "Enter ${BIRed}q${BICyan} to Exit the Menu: "
 	echo -e "\n"
 	echo -e "${BIRed}Enter your selection:${NC} \c"
@@ -58,6 +59,7 @@ printf "\e                                                                      
 		1) ./setup.sh ;;
         2) ./scan.sh ;;
 		3) ./evil-twin.sh ;;
+		4) ./protection.sh ;;
 		q) exit ;;
 	esac
 	echo -e "${BIRed}Enter return to continue${NC} \c"
