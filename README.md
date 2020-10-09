@@ -36,5 +36,5 @@ To run the program
 
 **Photos**  
 ![](Images/1.png )
-<img src="Images/1.pnh" width="100" height="10" >
+<img src="Images/1.pnh" width="10" height="10" >
 
