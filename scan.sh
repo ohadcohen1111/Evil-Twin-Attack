@@ -1,7 +1,5 @@
 #!/bin/bash
 
-./setup.sh 
-
 iwconfig
 echo "Please write the name of the Interface: "
 read interface
