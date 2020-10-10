@@ -26,8 +26,9 @@
 **Set up**  
 
 First we need to save the website, please write in terminal  
-`sudo su`  
-`thunar`  
+[sudo su  
+
+thunar]
 It's will open a folder, Enter the folder "System operation" then Enter the  var/www/html, delete all the files in there.  
 Move the file index.html, password.txt, facebook.svg to this folder.
 
