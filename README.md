@@ -36,7 +36,8 @@ Move the file index.html, password.txt, facebook.svg to this folder.
 
 **Usage**  
 
-To run the program   
+To run the program  
+
 `./menu`  
 
 1) Install
