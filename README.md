@@ -19,7 +19,7 @@
 
 
 **Installation**   
-Write in the terminal "git clone https://github.com/ohadcohen1111/Evil-Twin-Attack" 
+git clone https://github.com/ohadcohen1111/Evil-Twin-Attack.git 
 
 **set up**  
 First we need to save the website, please write in terminal "sudo su" and them "thunar".  
