@@ -7,7 +7,10 @@
 
 
 **Introduction**  
-
+  
+  Evil Twin Attack is a tool we developed in a research framework.  
+  The tool actually contains WIFI attack and WIFI attack protection.  
+  The tool was developed in Python.
 
 
 **Requirements** 
