@@ -10,7 +10,7 @@
 
 
 
-**Required**  
+**Requirements**  
 - Kali linux system  
 - Wifi adapter
 - Hostapd to create the access point, so it is highly configurable.  
@@ -21,18 +21,20 @@
 **Installation**   
 ` git clone https://github.com/ohadcohen1111/Evil-Twin-Attack.git `
 
-**set up**  
-First we need to save the website, please write in terminal "sudo su" and them "thunar".  
-It's will open a folder, Enter the folder "system operation" then Enter the  var/www/html, delete all the file in there.  
-Save index.html and password.txt.
+**Set up**  
+First we need to save the website, please write in terminal  
+`sudo su  
+thunar`  
+It's will open a folder, Enter the folder "System operation" then Enter the  var/www/html, delete all the files in there.  
+Move the file index.html, password.txt, facebook.svg to this folder.
 
 **Usage**  
 To run the program   
-./menuETA.sh  
+`./menu`  
 
 1) Install
 2) Scan Access Point  
-3) Evil Twin Aאtack
+3) Evil Twin Attack
 
 **Photos**  
 ![](Images/1.png )  
