@@ -8,9 +8,12 @@
 
 **Introduction**  
   
-  Evil Twin Attack is a tool we developed in a research framework.  
-  The tool actually contains WIFI attack and WIFI attack protection.  
-  The tool was developed in Python.
+  This project provides several abilities to perform an Evil Twin attack.  
+  - Scanning available access points with the selected network adapter
+  - Creating a fake access point with the same ESSID as the one you want
+  - Sending packets to disconnect the victim from the current access point
+  - Stealing victim Facebook credentials by providing the victim a fake Facebook login page
+  - Protecting script to alert the user from Evil-Twin attack
 
 
 **Requirements** 
@@ -28,14 +31,14 @@
 
 **Set up**  
 
-First we need to save the website, please write in terminal  
+First, we need to move the website files to the local webserver:  
   
 `sudo su`  
 `thunar`  
   
   
-It's will open a folder, Enter the folder "System operation" then Enter the  var/www/html, delete all the files in there.  
-Move the file index.html, password.txt, facebook.svg to this folder.
+It's will open a folder, Enter the folder "System operation", then Enter the  var/www/html, delete all the files in there.  
+Move the files index.html, password.txt, facebook.svg to this folder.
 
 **Usage**  
 
